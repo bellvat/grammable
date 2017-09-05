@@ -57,6 +57,13 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
 
+gem 'bootstrap', '~> 4.0.0.beta'
+
+
+gem 'jquery-rails'
+
+gem 'popper_js'
+
 
 
 
