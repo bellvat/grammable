@@ -59,10 +59,11 @@ end
 
 gem 'bootstrap', '~> 4.0.0.beta'
 
-
 gem 'jquery-rails'
 
 gem 'popper_js'
+
+gem 'simple_form'
 
 
 
