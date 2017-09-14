@@ -3,6 +3,7 @@ class GramsController < ApplicationController
   #before_action :require_authorized_for_gram, only: [:show]
   
   def index
+    @grams = Gram.all
   end
 
   def new
@@ -65,6 +66,6 @@ class GramsController < ApplicationController
 
 
   def gram_params
-    params.require(:gram).permit(:message)
+    params.require(:gram).permit(:message, :picture)
   end
 end
