@@ -14,28 +14,30 @@
   <body>
 
     <div class="top-nav">
-      <div class="col-10 col-sm-8 col-md-6 md-auto sm-auto mx-auto ">
-        <div class="brand float-left">
-          Grammable
-        </div>
-        <div class="add float-right">
+      <div class="row">
+        <div class="col-10 col-sm-8 sm-auto mx-auto ">
+          <div class="brand float-left">
+            Grammable
+          </div>
+          <div class="add float-right">
 
-          <% if current_user %>
-            Welcome <%= current_user.email %>
-            <%= link_to "New Post", new_gram_path %>
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "Sign In", new_user_session_path %>
-            <%= link_to "Sign Up", new_user_registration_path %>
-          <% end %>
+            <% if current_user %>
+              Welcome <%= current_user.email %>
+              <%= link_to "New Post", new_gram_path %>
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to "Sign In", new_user_session_path %>
+              <%= link_to "Sign Up", new_user_registration_path %>
+            <% end %>
 
-          <% if notice.present? %>
-            <p class="notice"><%= notice %></p>
-          <% end %>
+            <% if notice.present? %>
+              <p class="notice"><%= notice %></p>
+            <% end %>
 
-          <% if alert.present? %>
-            <p class="alert"><%= alert %></p>
-          <% end %>
+            <% if alert.present? %>
+              <p class="alert"><%= alert %></p>
+            <% end %>
+          </div>
         </div>
       </div>
       <br class= "clear-fix" />
